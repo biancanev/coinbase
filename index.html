@@ -2,6 +2,18 @@
 <html>
 <head>
 <title>Coinbase</title>
+  <style>
+    input[type=text] {
+    width: 130px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+/* When the input field gets focus, change its width to 100% */
+input[type=text]:focus {
+    width: 100%;
+}
+  </style>
 </head>
 <body>
 <form>
@@ -9,9 +21,9 @@
 <input type="text" name="coin" disabled id="coin_name">
 <input onclick="checkCoins()" type="submit" disabled value="Submit">
 </form>
-  <a href="https://api.cryptonator.com/api/ticker/btc-usd">BTC to USD</a>
-  <a href="https://api.cryptonator.com/api/ticker/eth-usd">ETH to USD</a>
-  <a href="https://api.cryptonator.com/api/ticker/xrp-usd">XRP to USD</a>
+  <a href="https://api.cryptonator.com/api/ticker/btc-usd">BTC to USD</a><br>
+  <a href="https://api.cryptonator.com/api/ticker/eth-usd">ETH to USD</a><br>
+  <a href="https://api.cryptonator.com/api/ticker/xrp-usd">XRP to USD</a><br>
 </body>
 <script>
 <!--My JavaScript
