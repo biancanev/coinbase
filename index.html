@@ -13,6 +13,21 @@
 input[type=text]:focus {
     width: 100%;
 }
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
   </style>
 </head>
 <body>
@@ -21,9 +36,28 @@ input[type=text]:focus {
 <input type="text" name="coin" disabled id="coin_name">
 <input onclick="checkCoins()" type="submit" disabled value="Submit">
 </form>
-  <a href="https://api.cryptonator.com/api/ticker/btc-usd">BTC to USD</a><br>
-  <a href="https://api.cryptonator.com/api/ticker/eth-usd">ETH to USD</a><br>
-  <a href="https://api.cryptonator.com/api/ticker/xrp-usd">XRP to USD</a><br>
+<table>
+  <tr>
+    <th>Coin</th>
+    <th>-- to USD</th> 
+    <th>-- to LTC</th>
+  </tr>
+  <tr>
+    <td>Bitcoin(BTC)</td>
+    <td><a href="https://api.cryptonator.com/api/ticker/btc-usd">BTC to USD</a></td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Etherium(ETH)</td>
+    <td><a href="https://apicryptonator.com/api/ticker/eth-usd">ETH to USD</a></td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Ripple(XRP)</td>
+    <td><a href="https://api.cryptonator.com/api/ticker/xrp-usd">XRP to USD</a></td>
+    <td>N/A</td>
+  </tr>
+</table>
 </body>
 <script>
 <!--My JavaScript
